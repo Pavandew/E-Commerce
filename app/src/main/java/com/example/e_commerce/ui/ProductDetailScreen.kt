@@ -6,6 +6,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.e_commerce.model.Product
 
@@ -17,7 +18,7 @@ fun ProductDetailScreen(product: Product, onAdd: (Product) -> Unit) {
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(product.title, style = MaterialTheme.typography.headlineSmall)
-        Text("₹${product.price}", style = MaterialTheme.typography.titleMedium)
+        Text(text = "₹${product.price}", style = MaterialTheme.typography.titleMedium, fontSize = 22.sp)
         Text("Rating: ${product.rating.rate} (${product.rating.count})", style = MaterialTheme.typography.bodySmall)
 
         Spacer(modifier = Modifier.height(8.dp))
